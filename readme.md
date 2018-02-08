@@ -2,6 +2,12 @@
 # Mango-Lara
 User Management Personal Profile  - Laravel Project
 
+Install admin account by using Laravel Seed 
+<b><i>php artisan db:seed</i></b>
+
+##Admin Account
+E-Mail : admin@admin.com<br />
+Password : password
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">

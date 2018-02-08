@@ -37,7 +37,13 @@
                         <a href="{{ url('/home') }}" class="waves-effect">
                             <i class="linea-icon linea-basic fa-fw" data-icon="v"></i>
                             <span class="hide-menu">Dashboard</span>
-                            <span class="label label-rouded label-custom pull-right">4</span>
+                            <span class="label label-rouded label-custom pull-right">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/users') }}" class="waves-effect">
+                            <i class="linea-icon linea-basic fa-fw" data-icon="m"></i>
+                            <span class="hide-menu">User Management</span>
                         </a>
                     </li>
                     <li class="nav-small-cap">--- Personal</li>
@@ -55,13 +61,13 @@
                     </li>
                     <li class="nav-small-cap">--- Support</li>
                     <li>
-                        <a href="#" class="waves-effect">
+                        <a href="https://github.com/Leotrin/Mango-Lara" class="waves-effect" target="_blank">
                             <i class="fa fa-circle-o text-danger"></i> 
                             <span class="hide-menu">Documentation</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="waves-effect">
+                        <a href="https://github.com/Leotrin/Mango-Lara" class="waves-effect" target="_blank">
                             <i class="fa fa-download text-success"></i> 
                             <span class="hide-menu">Download</span>
                         </a>

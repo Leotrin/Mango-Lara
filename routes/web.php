@@ -22,3 +22,10 @@ Route::get('/account_settings', 'HomeController@account_settings')->name('accoun
 Route::post('/account_settings', 'HomeController@save_account_settings')->name('save_account_settings');
 
 Route::get('/my_profile', 'HomeController@my_profile')->name('my_profile');
+
+Route::get('/users', 'UserController@users')->name('users');
+Route::get('/user/{id}/activate', 'UserController@activate')->name('activate');
+Route::get('/user/{id}/deactivate', 'UserController@deactivate')->name('deactivate');
+
+Route::get('/user/{id}/edit', 'UserController@edit')->name('edit');
+Route::post('/user/{id}/edit', 'UserController@edit')->name('save_edit');

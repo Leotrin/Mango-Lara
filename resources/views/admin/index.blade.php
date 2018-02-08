@@ -13,6 +13,8 @@
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('admin/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('admin/css/bootstrap-extension.css') }}" rel="stylesheet">
+    <link href="{{ asset('admin/css/datatables/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('admin/css/datatables/buttons.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Menu CSS -->
     <link href="{{ asset('admin/css/sidebar-nav.min.css') }}" rel="stylesheet">
     <!-- Animation CSS -->
@@ -65,8 +67,23 @@
     <script src="{{ asset('admin/js/waves.js') }}"></script>
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('admin/js/custom.min.js') }}"></script>
+    <script src="{{ asset('admin/js/datatables/jquery.dataTables.min.js') }}"></script>
+    <!-- start - This is for export functionality only -->
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <!-- end - This is for export functionality only -->
+    <script>
+        $(document).ready(function() {
+                $('#myTable').DataTable();
+            });
+    </script>
+    @yield('footer')
     <!--Style Switcher -->
     <script src="{{ asset('admin/js/jQuery.style.switcher.js') }}"></script>
-    @yield('footer')
 </body>
 </html>
