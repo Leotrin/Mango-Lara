@@ -37,10 +37,8 @@
                     <div class="form-group">
                         <div class="col-xs-12 text-center">
                             <div class="user-thumb text-center"> <img alt="thumbnail" class="img-circle" width="100" src="{{ asset('admin/img/logo.png') }}">
-                                <h3>MANGO LARA
-                                    <br />
-                                    <small><em>Laravel Project</em></small>
-                                </h3>
+
+                                <div id="example"></div>
                             </div>
                         </div>
                     </div>
@@ -74,5 +72,7 @@
     <script src="{{ asset('admin/js/custom.min.js') }}"></script>
     <!--Style Switcher -->
     <script src="http://eliteadmin.themedesigner.in/demos/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

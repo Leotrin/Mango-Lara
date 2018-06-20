@@ -53,5 +53,7 @@
 <!--Style Switcher -->
 <script src="{{ asset('admin/js/jQuery.style.switcher.js') }}"></script>
 @yield('footer')
+
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

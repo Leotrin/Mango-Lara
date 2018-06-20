@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::resource('users','Api\UserController');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/account_settings', 'HomeController@account_settings')->name('account_settings');
 Route::post('/account_settings', 'HomeController@save_account_settings')->name('save_account_settings');
@@ -29,3 +31,15 @@ Route::get('/user/{id}/deactivate', 'UserController@deactivate')->name('deactiva
 
 Route::get('/user/{id}/edit', 'UserController@edit')->name('edit');
 Route::post('/user/{id}/edit', 'UserController@edit')->name('save_edit');
+
+Route::get('/media', 'UploadsController@media')->name('media');
+Route::post('/upload', 'UploadsController@store')->name('upload.store');
+Route::get('/upload/destroy/{user_id}/{upload}', 'UploadsController@destroy');
+Route::get('/media/get_table', 'UploadsController@get_table');
+
+Route::get('/support', 'SupportTicketController@index');
+Route::get('/support/ticket/{id}', 'SupportTicketController@ticket');
+Route::get('/support/complete/ticket/{id}', 'SupportTicketController@complete');
+Route::post('/support/replay/ticket/{id}', 'SupportTicketController@replayTicket');
+Route::post('/support/new/ticket', 'SupportTicketController@newTicket');
+

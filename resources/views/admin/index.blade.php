@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('admin/img/logo.png') }}">
     <title>MangoLara</title>
@@ -17,6 +18,8 @@
     <link href="{{ asset('admin/css/datatables/buttons.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Menu CSS -->
     <link href="{{ asset('admin/css/sidebar-nav.min.css') }}" rel="stylesheet">
+    <!--alerts CSS -->
+    <link href="{{ asset('admin/css/sweetalert/sweetalert.css') }}" rel="stylesheet" type="text/css">
     <!-- Animation CSS -->
     <link href="{{ asset('admin/css/animate.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
@@ -24,6 +27,7 @@
     <!-- color CSS you can use different color css from css/colors folder -->
     <!-- We have chosen the skin-blue (blue.css) for this starter page. However, you can choose any other skin from folder css / colors .-->
     <link href="{{ asset('admin/css/colors/blue.css') }}" id="theme" rel="stylesheet">
+    <link href="{{ asset('admin/css/custom.css') }}" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -65,6 +69,8 @@
     <script src="{{ asset('admin/js/jquery.slimscroll.js') }}"></script>
     <!--Wave Effects -->
     <script src="{{ asset('admin/js/waves.js') }}"></script>
+    <script src="{{ asset('admin/js/sweetalert/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('admin/js/sweetalert/jquery.sweet-alert.custom.js') }}"></script>
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('admin/js/custom.min.js') }}"></script>
     <script src="{{ asset('admin/js/datatables/jquery.dataTables.min.js') }}"></script>
@@ -82,8 +88,11 @@
                 $('#myTable').DataTable();
             });
     </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>php
     @yield('footer')
     <!--Style Switcher -->
     <script src="{{ asset('admin/js/jQuery.style.switcher.js') }}"></script>
+
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

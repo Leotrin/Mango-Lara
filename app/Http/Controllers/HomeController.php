@@ -3,26 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('admin.pages.dashboard');
@@ -33,7 +21,6 @@ class HomeController extends Controller
     }
     public function save_account_settings(){
         $this->validator(request()->all())->validate();
-
         $user = User::find(auth()->user()->id);
         $user->name     = request('name');
         $user->email    = request('email');

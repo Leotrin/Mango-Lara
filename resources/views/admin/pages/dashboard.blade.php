@@ -1,6 +1,11 @@
 @extends('admin.index')
 
 @section('content')
+    <style>
+        .hideButton{
+            display: none;
+        }
+    </style>
     <div class="row bg-title">
         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
             <h4 class="page-title">Dashboard </h4>
@@ -19,7 +24,14 @@
                 	Dear {{ auth()->user()->name }}, 
                 	<br />
                 	<small>You are loged in as <strong>{{ auth()->user()->role }}</strong></small>
-                </h3> 
+                </h3>
+                @if(isset($page) && $page=="create")
+                    <div id="create"></div>
+                @endif
+                @if(isset($page) && $page=="edit")
+                    <div id="edit" data-id="{!! $id !!}"></div>
+                @endif
+                <div id="app"></div>
             </div>
         </div>
     </div>

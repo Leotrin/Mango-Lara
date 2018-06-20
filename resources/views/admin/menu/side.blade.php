@@ -41,6 +41,18 @@
                         </a>
                     </li>
                     <li>
+                        <a href="{{ url('/media') }}" class="waves-effect">
+                            <i class="linea-icon linea-basic fa-fw" data-icon="^"></i>
+                            <span class="hide-menu">Media</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('/support') }}" class="waves-effect">
+                            <i class="ti-ticket" data-icon="^"></i>
+                            <span class="hide-menu">Support Ticket</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{ url('/users') }}" class="waves-effect">
                             <i class="linea-icon linea-basic fa-fw" data-icon="m"></i>
                             <span class="hide-menu">User Management</span>
